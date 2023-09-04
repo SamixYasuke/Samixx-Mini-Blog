@@ -10,4 +10,4 @@ Now, the real fun begins with React. I used React to dynamically render the blog
 
 While I must admit that this project is far from perfect and there's always room for improvement, the journey has been incredibly rewarding. I've gained valuable insights and hands-on experience in web development, particularly in working with React and setting up a backend with Express.js and MongoDB.
 
-Thank you for taking the time to read about my mini anime blog project. If you have any feedback, suggestions, or questions, please feel free to share them. Your input is greatly appreciated!
+Thank you for taking the time to read about my mini anime blog project.
