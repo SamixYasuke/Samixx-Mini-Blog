@@ -9,19 +9,16 @@ import style from "../Assets/Styling/blog.module.css";
 const Blog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState({});
-  const [isLoading, setIsLoading] = useState(true); // Start with isLoading as true
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const getBlog = async (id) => {
     try {
       const response = await Axios.get(`http://localhost:5000/blog/${id}`);
-      const blogData = response.data.blog; // Assuming the data is an array with a single blog entry
+      const blogData = response.data.blog;
       setBlog(blogData);
+      setIsLoading(false);
 
-      // Simulate a 10-second delay
-      setTimeout(() => {
-        setIsLoading(false); // Set isLoading to false after 10 seconds
-      }, 4000); // 10000 milliseconds = 10 seconds
     } catch (error) {
       console.error("Error fetching blog:", error);
       setIsLoading(false);
