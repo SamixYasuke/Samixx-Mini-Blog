@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+}
+
+.aboutContainer{
+    margin: 20px 40px;
+    line-height: 20px;
+}
+
+.text{
+    line-height: 30px;
+    font-size: large;
+    text-align: center;
+}
+
+.listOne{
+    line-height: 30px;
+    font-size: large;
+}
+
+.listTwo{
+    line-height: 30px;
+    font-size: large;
+}
+
+.h5{
+    font-size: large;
+    line-height: 30px;
+}
