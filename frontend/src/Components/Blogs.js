@@ -5,7 +5,6 @@ const Blogs = ({ blogs }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
 
-  // Sort blogs by createdAt in descending order
   const sortedBlogs = [...blogs].sort((a, b) => {
     return new Date(b.createdAt) - new Date(a.createdAt);
   });
@@ -27,6 +26,7 @@ const Blogs = ({ blogs }) => {
       <div className={style.blogs}>
         {currentBlogs.map((blog) => (
           <a href={`/blog/${blog._id}`} key={blog._id}>
+            <img src= {blog.blogImage} alt= {blog.blogTitle}/>
             <h2>Title: {blog.blogTitle} </h2>
             <h4>Written By {blog.blogAuthor}</h4>
             <p className={style.content}>{limitText(blog.blogContent)}</p>
@@ -34,7 +34,6 @@ const Blogs = ({ blogs }) => {
         ))}
       </div>
 
-      {/* Pagination controls */}
       <div className={style.pagination}>
         <button
           onClick={() => setCurrentPage(currentPage - 1)}
