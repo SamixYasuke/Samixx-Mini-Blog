@@ -5,7 +5,6 @@ import Loading from "./Loading";
 import Error from "./Error";
 import style from "../Assets/Styling/blog.module.css";
 
-
 const Blog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState({});
@@ -48,13 +47,16 @@ const Blog = () => {
     <>    
         {
             isLoading ? <Loading /> : (
-                error ? <Error error={error}/> :     
-                <div className={style.blogContainer}>
+                error ? <Error error={error}/> :  
+                  <div className={style.blogContainer}>
+                    <div className={style.blogImageContainer}>
+                      <img src={blog.blogImage} alt={`Showing ${blog.blogTitle}`} />
+                    </div>
                     <h1 className={style.title}>Title: {blog.blogTitle}</h1>
                     <h3 className={style.author}>Author: {blog.blogAuthor}</h3>
                     <h3>{getTime(blog.createdAt)}</h3>
                     <p className={style.content}>{blog.blogContent}</p>
-              </div>
+                  </div>
             )
         }
     </>
