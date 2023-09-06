@@ -1,17 +1,18 @@
 import style from "../Assets/Styling/nav.module.css";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return(
     <header id={style.header}>
-      <a href="/">
+      <NavLink to="/">
         <h2>Samixx Blog</h2>
-      </a>
+      </NavLink>
       <ul>
         <li>
-          <a href="/createblog">Create Blog</a>
+          <NavLink to="/createblog">Create Blog</NavLink>
         </li>
         <li>
-          <a href="/about">About</a>
+          <NavLink to="/about">About</NavLink>
         </li>
       </ul>
     </header>
