@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
+.blogImageContainer{
+    display: flex;
+    justify-content: center;
+}
+
 .title{
     text-align: center;
 }
