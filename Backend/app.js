@@ -1,16 +1,13 @@
-
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import { Blog } from "./Models/blog.js";
-import _ from "lodash";
 
 const app = express();
+const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
-
-const PORT = 5000;
 
 app.get("/blogs", async(req, res)=>{
     try {
@@ -29,6 +26,7 @@ app.get("/blogs", async(req, res)=>{
 app.post("/blog", async(req, res)=>{
     try {
         const blogPost = new Blog({
+            blogImage : req.body.blogImage,
             blogAuthor : req.body.blogAuthor,
             blogTitle : req.body.blogTitle,
             blogContent : req.body.blogContent
