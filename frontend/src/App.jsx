@@ -4,6 +4,7 @@ import About from "./Pages/About";
 import CreateBlog from "./Pages/CreateBlog";
 import Nav from "./Templates/Nav";
 import Blog from "./Components/Blog";
+import NotFound from "./Pages/NotFound";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/about" element={ <About /> } />
           <Route path="/createblog" element={ <CreateBlog /> } />
           <Route path="/blog/:id" element={ <Blog /> } />
+          <Route path="*" element={ <NotFound /> }></Route>
         </Routes>
       </>
     </Router>
